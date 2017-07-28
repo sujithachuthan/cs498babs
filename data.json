@@ -1,0 +1,6 @@
+[
+    {"station": "San Jose", "value": 14879, "percent": 5, "paint": "#2b8cbe"},
+    {"station": "Palo Alto ", "value": 3116, "percent": 1, "paint": "#a8ddb5"},
+    {"station": "San Francisco ", "value": 280323, "percent": 92, "paint": "#084081"},
+    {"station": "Mountain View ", "value": 6399, "percent": 2, "paint": "#7bccc4"} 
+]

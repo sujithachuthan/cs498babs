@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bay Area Bike Ride Data</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+		@import url(style.css);
+			
+		text {
+		  font-size: 10px;
+		}
+
+		#circle circle {
+		fill: none;
+		pointer-events: all;
+		}
+		 
+		.group path {
+		fill-opacity: .5;
+		}
+		 
+		path.chord {
+		stroke: #000;
+		stroke-width: .25px;
+		}
+		 
+		#circle:hover path.fade {
+		display: none;
+		}
+
+		
+	    .legend {
+         font-size: 12px;
+        }
+	  
+        rect {
+          cursor: pointer;                                              
+          stroke-width: 2;
+        }
+	  
+        rect.disabled {                                                 
+          fill: transparent !important;                                 
+        }
+
+		.arc1 text {
+		  font: 10px sans-serif;
+		  text-anchor: middle;
+		}
+
+		.arc1 path {
+		  stroke: #fff;
+		}
+		
+        <!--#piediv {
+        height: 460px;
+        margin: 0 auto;                                               
+        position: relative;
+        width: 480px;
+        }-->
+		
+		#bardiv {
+        height: 300px;
+        margin: 20px auto;                                               
+        position: relative;
+        width: 400px;
+        }
+		.vertical-text {
+			transform: rotate(-90.0deg);
+		}
+		  
+		.axis path,
+		.axis line {
+		  fill: none;
+		  stroke: #000;
+		  shape-rendering: crispEdges;
+		}
+
+		.bar {
+		  fill: orange;
+		}
+
+		.bar:hover {
+		  fill: orangered ;
+		}
+        
+        .trip-percent-label {fill : black; font-size : 15px; font-weight:bold;}		
+
+	</style>
+</head>
+
+
+<body>
+
+<div class="container">
+  <h2>BAY AREA BIKE RIDE SHARE DATA - STATION WISE INFORMATION</h2>
+  <p>This Visualization Is Based On A Simple Summary Of All Bike Data That Has Been Accumulated For The Final Project Showing Different Instances Of Time & Cateogry Based Information</p>
+
+  <ul class="nav nav-pills nav-justified">
+    <li class="active"><a data-toggle="pill" href="#home">Overview</a></li>
+    <li><a data-toggle="pill" href="#menu1">Scene 1 - Trip Coverage</a></li>
+    <li><a data-toggle="pill" href="#menu2">Scene 2 - Trips & Stations </a></li>
+  </ul>
+
+  <div class="tab-content">
+  <!-- Home Page Begins here -->
+    <div id="home" class="tab-pane fade in active">
+      <h3><u>BAY AREA BIKE SHARE (BABS)</u></h3>
+      <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site</b></p>
+	  <br>
+	  <div id="rowdiv1" class="row">
+		   <div id="piediv" class="col-md-6 col-sm-6" >
+			<script src="https://d3js.org/d3.v4.min.js"></script>
+			<script src="pie.js" type="text/javascript"></script>
+		  </div>
+		  <div id="bardiv" class="col-md-6 col-sm-6" >
+			<script src="https://d3js.org/d3.v4.min.js"></script>
+			<script src="mybar.js" type="text/javascript"></script>
+		 </div>
+	  </div>
+	  
+		 <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site</b></p>    
+	 
+	</div>
+	
+	<!-- Donut Chart Page Begins here -->
+	
+    <div id="menu1" class="tab-pane fade">
+      <h3>Scene 1 - Summary</h3>
+      <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site</b></p>
+	  <script src="http://d3js.org/d3.v4.min.js"></script>
+	  <script src="donut1.js" type="text/javascript"></script>
+	 <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site</b></p>
+	  
+	     	  
+	 </div>
+	 	 
+    <div id="menu2" class="tab-pane fade">
+      <h3>Scene 2 - Trips & Stations</h3>
+	  <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site</b></p>
+      <br><br>
+	  <script src="http://d3js.org/d3.v3.min.js"></script>
+	  <script src="firstchart.js" type="text/javascript"></script> <br><br><br><br>
+	  <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site</b></p>
+
+	 
+
+	  <!--<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#csc2">About The Visualization</button>
+	  <div id="csc2" class="collapse ">
+	  <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site<b></p>
+	  </div>-->
+	 	  
+	  
+    </div>
+	
+ <!-- Collapsible button goes here Common for all pages -->
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#csc2">About The Visualization</button>
+	  <div id="csc2" class="collapse ">
+	  <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site<b></p>
+	  </div>
+</div>
+
+
+
+</body>
+</html>
