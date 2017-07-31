@@ -9,7 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
 		@import url(style.css);
-			
+
 		text {
 		  font-size: 10px;
 		}
@@ -18,32 +18,32 @@
 		fill: none;
 		pointer-events: all;
 		}
-		 
+
 		.group path {
 		fill-opacity: .5;
 		}
-		 
+
 		path.chord {
 		stroke: #000;
 		stroke-width: .25px;
 		}
-		 
+
 		#circle:hover path.fade {
 		display: none;
 		}
 
-		
+
 	    .legend {
          font-size: 12px;
         }
-	  
+
         rect {
-          cursor: pointer;                                              
+          cursor: pointer;
           stroke-width: 2;
         }
-	  
-        rect.disabled {                                                 
-          fill: transparent !important;                                 
+
+        rect.disabled {
+          fill: transparent !important;
         }
 
 		.arc1 text {
@@ -54,24 +54,24 @@
 		.arc1 path {
 		  stroke: #fff;
 		}
-		
+
         <!--#piediv {
         height: 460px;
-        margin: 0 auto;                                               
+        margin: 0 auto;
         position: relative;
         width: 480px;
         }-->
-		
+
 		#bardiv {
         height: 300px;
-        margin: 20px auto;                                               
+        margin: 20px auto;
         position: relative;
         width: 400px;
         }
 		.vertical-text {
 			transform: rotate(-90.0deg);
 		}
-		  
+
 		.axis path,
 		.axis line {
 		  fill: none;
@@ -86,8 +86,8 @@
 		.bar:hover {
 		  fill: orangered ;
 		}
-        
-        .trip-percent-label {fill : black; font-size : 15px; font-weight:bold;}		
+
+        .trip-percent-label {fill : black; font-size : 15px; font-weight:bold;}
 
 	</style>
 </head>
@@ -96,20 +96,28 @@
 <body>
 
 <div class="container">
-  <h2>BAY AREA BIKE RIDE SHARE DATA - STATION WISE INFORMATION</h2>
-  <p>This Visualization Is Based On A Simple Summary Of All Bike Data That Has Been Accumulated For The Final Project Showing Different Instances Of Time & Cateogry Based Information</p>
+  <h2>BAY AREA BIKE SHARE RIDE ANALYSIS.</h2>
+  <p>This Narrative Visualization is submitted towards the final project submission of CS 498 Data Visualization course.
+  </p>
 
   <ul class="nav nav-pills nav-justified">
     <li class="active"><a data-toggle="pill" href="#home">Overview</a></li>
-    <li><a data-toggle="pill" href="#menu1">Scene 1 - Trip Coverage</a></li>
+    <li><a data-toggle="pill" href="#menu1">Scene 1 - Average Trips</a></li>
     <li><a data-toggle="pill" href="#menu2">Scene 2 - Trips & Stations </a></li>
   </ul>
 
   <div class="tab-content">
   <!-- Home Page Begins here -->
     <div id="home" class="tab-pane fade in active">
-      <h3><u>BAY AREA BIKE SHARE (BABS)</u></h3>
-      <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site</b></p>
+      <h3><u>Overview-BAY AREA BIKE SHARE(BABS)</u></h3>
+      <p><b>The Bay Area Bike Share system is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can be annual members (Subscribers) or purchase on Demand for a short term of 1 or 3 days (Customers).The dataset used here is a public dataset and can be downloaded from BABS site. This narrative visualization captures overall information on the number of rides across various regions and proceeds to highlight average rides per week (Scene 1) and finally culminating in a self-exploratory model (Scene 2) for the number of trips between various stations in the region of San-Jose.
+      </b></p>
+      <br>
+      <p><b>The data we analyze here comes from rides between September 2015 and August 2016 for the main regions of San Francisco, San Jose, Mountain View and Palo Alto. During this time period there were ~0.3 million rides (304717 number of rides). The number of rides across the user base of Subscribers and Customers are shown below. Also represented is the number of trips across various regions during this time period.
+      </b></p>
+      <br>
+      <p style="color:brown;text-align:center"><b><u>Rides By Membership & Trips per Regions.</u>
+      </b></p>
 	  <br>
 	  <div id="rowdiv1" class="row">
 		   <div id="piediv" class="col-md-6 col-sm-6" >
@@ -121,45 +129,78 @@
 			<script src="mybar.js" type="text/javascript"></script>
 		 </div>
 	  </div>
-	  
-		 <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site</b></p>    
-	 
+
+	  <p><b>Almost 90% of riders have an annual subscription.The remaining 10% of riders were customers who purchased a 24-hour or 3-day pass. We can also see that San Francisco region accounts for the most number of rides (almost 90 %) within the BABS system while contribution from other regions being significantly less.
+	  For further details regarding average trips on a weekday and trips per station for the San-Jose Region please procced to the tabs <u>Scene 1-Average Trips</u> and <u>Scene 2-Trips & Stations</u> respectively.
+	  </b></p>
+
+	  <br>
+	  <p><b>Please click the below button for the Essay which presents the various  points regarding this Narrative Visualization and as required by the assignment.
+      of the rubric for this assignment.
+	  </b></p>
+
 	</div>
-	
+
 	<!-- Donut Chart Page Begins here -->
-	
+
     <div id="menu1" class="tab-pane fade">
-      <h3>Scene 1 - Summary</h3>
-      <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site</b></p>
+      <h3><u>Scene 1 - Summary of Avegrage Number of Trips by Weekday</u></h3>
+      <p><b>We already saw in the overview that BABS users are more likely to be Subscribers and San Franciso being the most popular region.
+      This scene depicts the average number of rides on a given weekday acrros the regions of San Francisco, San Jose, Mountain View and Palo Alto.
+      </b></p>
+
+      <br>
+	  <p style="color:brown;text-align:center"><b><u>Trips by Weekday</u>
+      </b></p>
+
 	  <script src="https://d3js.org/d3.v4.min.js"></script>
 	  <script src="donut1.js" type="text/javascript"></script>
-	 <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site</b></p>
-	  
-	     	  
+	 <p><b> It can be observed from the above chart that the BABS is popular during the mid-week i.e during the days of Tuesday, Wednesday and Thursday. The usage peaks during the mid-week, gradually reducing to lower number of rides on Fridays and much lower numbers during the weekend (Saturdays & Sundays). The number of rides during the weekend contributes to less than ~10%.
+	 Please procced to the tab <u>Scene 2-Trips & Stations</u> for exploring further.
+	 </b></p>
+
+
 	 </div>
-	 	 
+
     <div id="menu2" class="tab-pane fade">
-      <h3>Scene 2 - Trips & Stations</h3>
-	  <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site</b></p>
-      <br><br>
+      <h3><u>Scene 2 - Trips & Stations</u></h3>
+	  <p><b>This scene captures the number of trips in the region of San Jose and the reader is free to interactively explore the data. It shows the origin-destination pair of every trip taken in the San Jose region .The arcs represent the individual stations, and the trips (relations) between them are represented by the chords.
+	    Please mouse over a station & the respective chords to explore the number of trips from/to that particular station.</b></p>
+      <br>
+      <p style="color:brown;text-align:center"><b><u>Rides for the Region of San-Jose   (Mouse over the arcs&chords to explore trips between Stations).</u>
+      </b></p>
+
 	  <script src="https://d3js.org/d3.v3.min.js"></script>
 	  <script src="firstchart.js" type="text/javascript"></script> <br><br><br><br>
-	  <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site</b></p>
+	  <p><b>The Arc size is propotional to the number of trips that a particualr station is part of (origin or destination).The Chord size & shape (tapering)
+	  depicts the number of trips between a chosen pair of stations.It can be observed that SJC Dridon is the most busy station followed by SCLA Almaden.
+	  It's intresting to note from the shape of the arc's (tapering) that the number of trips from-to (between) a pair of station does not vary much.
+	  </b></p>
 
-	 
 
-	  <!--<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#csc2">About The Visualization</button>
-	  <div id="csc2" class="collapse ">
-	  <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site<b></p>
-	  </div>-->
-	 	  
-	  
     </div>
-	
+
  <!-- Collapsible button goes here Common for all pages -->
   <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#csc2">About The Visualization</button>
 	  <div id="csc2" class="collapse ">
-	  <p><b>BABS is a member-ship based system for short term bicycle rentals in the San Francisco Bay Area region. Users can rent bicycles for short journeys between stations though out the city. The system is completely automated for the users with kiosks having fully automated docking facilities. Users can purchase annual memberships (Subscribers) or purchase on Demand (PayPerTrip). The data which I have chosen for this assignment are from rides between September 2015 and August 2016.This is a public dataset (Year 3 Data) and can be downloaded from BABS Site<b></p>
+	  <h3><u>Structure and Design of the Visualization Layout</u></h3>
+	  <p>
+      The design of this Narrative Visualization follows a Martini Glass Visualization structure. The structure begins with Author Driven content, introducing the reader to the overview (Overview tab) of this particular narrative. Once the stage is set with the details and charts provided on the Overview tab, the reader can navigate to Scene 1 which is also an Author driven content explaining Analysis with respect to the scenario depicted on that particular scene. The visualization further opens up to Scene 3 which represents a Reader Driven stage where the user is free to interactively explore the data. This responsive website has been built using the Bootstrap framework (HTML, CSS and JS) and the charts are built using D3JS. The following sections below explains in details regarding the scenes and the various construction details of the charts.
+	  </p>
+	  <h3><u>Overview Tab-Detailed Explanation.</u></h3>
+	  <p>The overview tab gives a high-level introduction regarding the topic chosen for this assignment and the dataset.The introduction also covers what the reader can expect from this narrative visualization and the various scenes thus setting the stage. There are 2 charts provided in this section, a pie chart which captures the number of trips plotted by the type of user Subscriber and Consumer and another bar chart which plots the total number of trips per region.
+	  </p>
+      <p>(a)Pie Chart Detailed Explanation-The pie chart uses the parameters of Number of trips for each pie and this number is also captured on the pie (annotation).The cart also defines a legend using simple rectangle elements and is annotated with the % of the number of trips and the user type. The color parameters (ordinal scales) used for the pie and the legend are same and the annotations convey the relevant information.(b) Bar Chart Detailed Explanation- The Bar chart captures the number of trips for the various regions and plots the % of trips parameter on the Y-axis and the Station regions parameter on the X-axis. The chart is further annotated with number of trips and the respective % on each of the bar & chart labels respectively. An external json file is used here to capture some the input parameters (Stations, Numbers of Trips, Color Scale etc...) which is used for the construction of the d3js elements. Both of the above charts are static charts and the input parameters explained above controls the state of the visualization.The above charts and annotations helps in providing an overview of the data with respect to the visualization.
+	  </p>
+      <h3><u>Scene 1 Average Trips-Detailed Explanation.</u></h3>
+      <p>Scene 1 captures the average number of rides on a weekday using a simple donut chart and the respective legends. The chart uses the parameter of Number of trips for constructing each pie and this number along with the calculated percentage is captured on the chart (annotation).The legends are defined using the rectangle elements and are positioned inside the donut. The legend is annotated with appropriate weekdays (parameter) and consistent ordinal color(parameter) scale. This scene being an author driven content there are no specific user driven interactions and the state of the chart is controlled by the initial data parameters as explained above. The above charts, annotations and textual explanations and conclusions helps in conveying the required information about this scene or scenario.
+      </p>
+     <h3><u>Scene 2 Trips and Stations -Detailed Explanation.</u></h3>
+     <p>As mentioned earlier this Narrative follows a Martini Glass Visualization structure with the Overview and Scene1 being author driven contents. The Scene 2 captures the number of trips in the region of San Jose, this section of the visualization is user driven and is enabled by the plotted chord diagram. It shows the origin-destination pair of every trip taken the San Jose region .The arcs represent the individual stations and the trips (relations) between them are represented by the chords. The parameters being passed for constructing this chart is an adjacency matrix which captures the number of trips between each of the stations, also passed are the list of stations and their color legends. The input parameters mentioned above are passed using external files. The state of the chart is controlled by mouse over and mouse out events thus enabling the analysis of each arch and the related chords. On mouse over the detailed trip parameters for each chord is shown (annotations) thus enabling the user to view the number of trips for a given origin-destination pair. The station names (annotations) are also positioned radially along the arcs .The mouse over and mouse out events also control the opacity on transition thus resetting state of the chart as well as enabling the user explore each set of data as he desires. The title of the chart makes it clear to reader that exploration is enabled by mouse over events.
+      </p>
+
+
+
 	  </div>
 </div>
 
